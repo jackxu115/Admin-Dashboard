@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  //overflow: hidden;
 }
 
 .container {
@@ -8,6 +9,7 @@ body {
   grid-template-rows: 1fr 3fr;
   background: #373833;
   height: 100vh;
+
   &_vicBar {
     background: #fec72e;
     grid-column-start: 1;
@@ -16,24 +18,29 @@ body {
     grid-row-end: 3;
     display: grid;
     grid-template-rows: 2fr 7fr 4fr;
+
     &_heading {
       padding: 0 10px;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
+
       img {
         height: 50px;
         color: #f7f7f7;
       }
+
       p {
         font-size: 30px;
         font-weight: bold;
       }
     }
+
     &_bar1 {
       display: flex;
       flex-direction: column;
+
       &_item {
         padding: 0 30px;
         margin: 0;
@@ -41,14 +48,17 @@ body {
         flex-direction: row;
         gap: 10px;
         align-items: center;
+
         img {
           height: 30px;
         }
       }
     }
+
     &_bar2 {
       display: flex;
       flex-direction: column;
+
       &_item {
         display: flex;
         flex-direction: row;
@@ -56,12 +66,14 @@ body {
         margin: 0;
         gap: 10px;
         align-items: center;
+
         img {
           height: 30px;
         }
       }
     }
   }
+
   &_horBar {
     background: #ffffff;
     grid-column-start: 2;
@@ -77,10 +89,12 @@ body {
       padding: 10px 60px;
       align-items: center;
       justify-content: space-between;
+
       &_search {
         display: flex;
         flex-direction: row;
         gap: 20px;
+
         input {
           width: 550px;
           background-color: #eeeeee;
@@ -88,16 +102,19 @@ body {
           border: none;
         }
       }
+
       &_other {
         display: flex;
         flex-direction: row;
         gap: 20px;
         align-items: center;
+
         p {
           font-size: 20px;
           font-weight: bold;
         }
       }
+
       img {
         height: 30px;
       }
@@ -116,18 +133,21 @@ body {
         flex-direction: row;
         gap: 20px;
         align-items: center;
+
         &_name {
           display: flex;
           flex-direction: column;
           margin: 0;
           padding: 0;
           gap: 5px;
+
           &_welcome {
             font-size: 15px;
             font-weight: bold;
             margin: 0;
             padding: 0;
           }
+
           &_userName {
             font-size: 25px;
             font-weight: bold;
@@ -141,6 +161,7 @@ body {
         display: flex;
         flex-direction: row;
         gap: 50px;
+
         &_method {
           button {
             background-color: #66615e;
@@ -156,12 +177,167 @@ body {
       }
     }
   }
+
   &_content {
     background: #010101;
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    display: grid;
+    grid-template-rows: 3fr 4fr;
+    grid-template-columns: 9fr 4fr;
+    color: #f7f7f7;
+    font-weight: bold;
+
+    &_projects {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      display: flex;
+      flex-direction: column;
+      padding: 0 30px;
+
+      &_heading p {
+        font-size: 20px;
+      }
+
+      &_list {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+        margin: 0;
+
+        &_card {
+          background-color: #f1f1f1;
+          border-radius: 5px;
+          border-left: #66615e 10px solid;
+          color: #000000;
+          display: flex;
+          flex-direction: column;
+          margin: 0;
+          padding: 5px;
+
+          &_heading {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+          }
+
+          &_content {
+            margin: 0;
+            padding: 0 0 57px 0;
+            font-weight: normal;
+            font-size: 14px;
+          }
+
+          &_icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+
+            img {
+              height: 20px;
+              padding: 0 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &_announcements {
+      grid-row-start: 1;
+      grid-row-end: 2;
+      grid-column-start: 2;
+      grid-column-end: 3;
+
+      &_heading p {
+        font-size: 20px;
+      }
+
+      &_card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        background-color: #f7f7f7;
+        margin-right: 20px;
+        border-radius: 5px;
+        color: #000000;
+
+        &_item {
+          margin: 0;
+          padding: 5px 20px;
+
+          &_heading {
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+          }
+
+          &_content {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    &_trending {
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      &_heading p {
+        font-size: 20px;
+      }
+
+      &_card {
+        background-color: #f7f7f7;
+        margin-right: 20px;
+        border-radius: 5px;
+        color: #000000;
+
+        &_item {
+          display: flex;
+          flex-direction: row;
+          margin: 0;
+          padding: 8px 20px;
+          align-items: center;
+          gap: 10px;
+
+          &_text {
+            margin: 0;
+            padding: 0;
+
+            &_name {
+              font-size: 14px;
+              margin: 0;
+              padding: 0;
+            }
+
+            &_content {
+              font-size: 12px;
+              font-weight: normal;
+              margin: 0;
+              padding: 0;
+            }
+          }
+
+          img {
+            height: 40px;
+            border-radius: 50%;
+            background-color: #00c3e3;
+          }
+        }
+      }
+    }
+
   }
 }
 
